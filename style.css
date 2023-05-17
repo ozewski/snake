@@ -1,0 +1,95 @@
+/*
+Variables are set in the root class to indicate the desired
+number of rows and columns. These numbers can be changed for
+a smaller or larger board. The board scales accordingly. The 
+board also scales on the x and y axis according to the
+minimum of the view width and height, meaning the board is
+always square and always fits in the display (until a minimum 
+size is reached).
+
+The board and sidebar are aligned in the center of the screen
+using a horizontal flexbox. The sidebar is aligned using a
+vertical flexbox to contain information.
+*/
+
+:root {
+    --row-count: 17;
+    --col-count: 17;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+}
+
+#game {
+    border-collapse: collapse;
+    height: 100%;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 220px;
+    background-color: #e9e9e9;
+}
+
+.sidebar-panel {
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.warning {
+    color: red;
+}
+
+.sidebar-score {
+    font-weight: bold;
+}
+
+.sidebar-score h2 {
+    margin-bottom: 10px;
+}
+
+#score {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: darkgreen;
+}
+
+.game-pixel {
+    background-color: skyblue;
+    width: calc(min(90vh, 80vw) / var(--col-count));
+    height: 100%;
+    min-width: 15px;
+}
+
+.game-row {
+    display: flex;
+    height: calc(min(90vh, 80vw) / var(--row-count));
+    min-height: 15px;
+}
+
+.snake-body {
+    background-color: yellow;
+}
+
+.food {
+    background-color: orange;
+}

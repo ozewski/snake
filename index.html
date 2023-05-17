@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Snake</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <body>
+        <div id="container">
+            <div id="content">
+                <div id="game" style="display: none"></div>
+                <div id="sidebar">
+                    <div class="sidebar-panel sidebar-main">
+                        <h1 class="sidebar-header">SNAKE</h1>
+                        <hr>
+                        <p class="sidebar-text">Collect food, avoid crashing into the wall or yourself.</p>
+                    </div>
+                    <div id="dead" class="sidebar-panel sidebar-message" style="display: none;">
+                        <h2 class="warning">CRASHED!</h2>
+                    </div>
+                    <div class="sidebar-panel sidebar-score">
+                        <hr>
+                        <h2>SCORE:</h2>
+                        <div id="score">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    
+</html>
